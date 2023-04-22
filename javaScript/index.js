@@ -31,6 +31,25 @@ function cadastrarUsuario() {
 		senha : senha
 	}
 
+	var div = document.body;
+
+	var paragrafoNome = document.createElement("p");
+	var nome = document.createTextNode("Nome: " + usuario.nome);
+
+	var paragrafoSobrenome = document.createElement("p");
+	var sobrenome = document.createTextNode("Sobrenome: " + usuario.sobrenome);
+
+	var paragrafoData = document.createElement("p");
+	var data = document.createTextNode("Data: " + usuario.data);
+
+	paragrafoNome.appendChild(nome);
+	paragrafoSobrenome.appendChild(sobrenome);
+	paragrafoData.appendChild(data);
+
+	div.appendChild(paragrafoNome);
+	div.appendChild(paragrafoSobrenome);
+	div.appendChild(paragrafoData);
+
 	console.log(usuario);
 }
 
