@@ -42,13 +42,23 @@ function cadastrarUsuario() {
 	var paragrafoData = document.createElement("p");
 	var data = document.createTextNode("Data: " + usuario.data);
 
+	var paragrafoGenero = document.createElement("p");
+	var genero = document.createTextNode("Gênero: " + usuario.genero);
+
+	var paragrafoSenha = document.createElement("p");
+	var senha = document.createTextNode("Senha: " + usuario.senha);
+
 	paragrafoNome.appendChild(nome);
 	paragrafoSobrenome.appendChild(sobrenome);
 	paragrafoData.appendChild(data);
+	paragrafoGenero.appendChild(genero);
+	paragrafoSenha.appendChild(senha);
 
 	div.appendChild(paragrafoNome);
 	div.appendChild(paragrafoSobrenome);
 	div.appendChild(paragrafoData);
+	div.appendChild(paragrafoGenero);
+	div.appendChild(paragrafoSenha);
 
 	console.log(usuario);
 }
