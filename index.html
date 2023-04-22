@@ -8,13 +8,13 @@
 	<body>
 		<div class="caixa">
 			<p>Nome:</p>
-			<input type="text">
+			<input type="text" id="nome">
 
 			<p>Sobrenome:</p>
-			<input type="text">
+			<input type="text" id="sobrenome">
 
 			<p>Data:</p>
-			<input type="text">
+			<input type="date" id="data">
 
 			<p>Gênero:</p>
 			<input type="radio" name="genero" value="masculino">Masculino
@@ -24,7 +24,9 @@
 			<p>Senha:</p>
 			<input type="text">
 
-			<button>Cadastrar</button>
+			<button onclick="cadastrarUsuario()">Cadastrar</button>
 		</div>
+
+		<script src="javaScript/index.js"></script>
 	</body>
 </html>
