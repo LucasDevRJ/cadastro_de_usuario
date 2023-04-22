@@ -6,9 +6,15 @@ function cadastrarUsuario() {
 
 	var generos = document.getElementsByName("genero");
 
-	for (var i = 0; generos.length; i++) {
-		if (generos[i].checked) {
-			console.log("Gênero = " + generos[i].value);
+	for (var i = 0; i < generos.length; i++) {
+		if (generos[i].checked == true) {
+			if (generos[i].value == "masculino") {
+				var genero = "Masculino";
+			} else if (generos[i].value == "feminino") {
+				var genero = "Feminino";
+			} else if (generos[i].value == "outros") {
+				var genero = "Outros";
+			}
 		}
 	}
 
@@ -24,6 +30,8 @@ function cadastrarUsuario() {
 		genero : genero,
 		senha : senha
 	}
+
+	console.log(usuario);
 }
 
 var botao = document.querySelector("button");
