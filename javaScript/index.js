@@ -85,7 +85,7 @@ function cadastrarUsuario() {
 
 	caixa.style.height = "auto";
 
-	divisaoUsuario.appendChild(divisaoUsuarioFilho);
+	divisaoUsuario.appendChild(divisaoUsuarioFilho)
 
 	console.log(usuario);
 
