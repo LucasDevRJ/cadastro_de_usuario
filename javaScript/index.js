@@ -1,4 +1,5 @@
 function cadastrarUsuario() {
+	var caixa = document.getElementById("caixa");
 	var campoNome = document.getElementById("nome");
 	var campoSobrenome = document.getElementById("sobrenome");
 	var campoData = document.getElementById("data");
@@ -7,8 +8,11 @@ function cadastrarUsuario() {
 
 	var generos = document.getElementsByName("genero");
 
+	var generoEscolhido = false;
+
 	for (var i = 0; i < generos.length; i++) {
 		if (generos[i].checked == true) {
+			generoEscolhido = true;
 			if (generos[i].value == "masculino") {
 				var genero = "Masculino";
 			} else if (generos[i].value == "feminino") {
@@ -16,7 +20,7 @@ function cadastrarUsuario() {
 			} else if (generos[i].value == "outros") {
 				var genero = "Outros";
 			}
-		}
+		} 
 	}
 
 	var nome = campoNome.value;
@@ -24,14 +28,26 @@ function cadastrarUsuario() {
 	var data = campoData.value;
 	var senha = campoSenha.value;
 
-	var usuario = {
-		nome : nome,
-		sobrenome : sobrenome,
-		data : data,
-		genero : genero,
-		senha : senha
+	var camposPreenchidos = false;
+
+	if (nome.length == 0 || sobrenome.length == 0 || 
+		data.length == 0 || senha.length == 0 
+		|| generoEscolhido == false) {
+		alert("Há campos vazio!");
+	} else {
+		camposPreenchidos = true;
 	}
 
+	if (camposPreenchidos == true) {
+		var usuario = {
+			nome : nome,
+			sobrenome : sobrenome,
+			data : data,
+			genero : genero,
+			senha : senha
+		}
+	}
+ 
 	var divisaoUsuarioFilho = document.createElement("div");
 
 	var paragrafoNome = document.createElement("p");
@@ -64,6 +80,10 @@ function cadastrarUsuario() {
 	divisaoUsuarioFilho.style.border = "solid 2px #40E0D0";
 	divisaoUsuarioFilho.style.padding = "20px";
 	divisaoUsuarioFilho.style.margin = "20px";
+	divisaoUsuarioFilho.style.backgroundColor = "#FFFAFA";
+	divisaoUsuarioFilho.style.borderRadius = "5px";
+
+	caixa.style.height = "auto";
 
 	divisaoUsuario.appendChild(divisaoUsuarioFilho);
 

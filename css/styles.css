@@ -3,7 +3,7 @@ body {
 	font-family: 'Times New Roman', serif;
 }
 
-.caixa {
+#caixa {
 	height: 600px;
 	display: flex;
 	flex-direction: column;
