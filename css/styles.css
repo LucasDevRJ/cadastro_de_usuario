@@ -1,7 +1,12 @@
 .caixa {
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.formulario {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #F0E68C;
-	border: 2px solid black;
 }
