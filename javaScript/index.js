@@ -61,6 +61,10 @@ function cadastrarUsuario() {
 	divisaoUsuarioFilho.appendChild(paragrafoGenero);
 	divisaoUsuarioFilho.appendChild(paragrafoSenha);
 
+	divisaoUsuarioFilho.style.border = "solid 2px #40E0D0";
+	divisaoUsuarioFilho.style.padding = "20px";
+	divisaoUsuarioFilho.style.margin = "20px";
+
 	divisaoUsuario.appendChild(divisaoUsuarioFilho);
 
 	console.log(usuario);
