@@ -1,5 +1,6 @@
 body {
 	background-color: #F0FFFF;
+	font-family: 'Times New Roman', serif;
 }
 
 .caixa {
@@ -22,7 +23,6 @@ body {
 }
 
 .atributo {
-	font-family: 'Times New Roman', serif;
 	font-size: 17px;	
 }
 
@@ -34,10 +34,23 @@ body {
 	border-radius: 5px;
 }
 
+.caixa-botao {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.botao {
+	padding: 10px 0;
+	width: 50%;
+	cursor: pointer;
+}
+
 .generos {
 	display: flex;
 }
 
-.botao {
-	width: 30%;
+#usuario {
+	width: 100%;
+	display: flex;
 }

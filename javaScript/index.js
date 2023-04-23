@@ -3,6 +3,7 @@ function cadastrarUsuario() {
 	var campoSobrenome = document.getElementById("sobrenome");
 	var campoData = document.getElementById("data");
 	var campoSenha = document.getElementById("senha");
+	var divisaoUsuario = document.getElementById("usuario");
 
 	var generos = document.getElementsByName("genero");
 
@@ -31,7 +32,7 @@ function cadastrarUsuario() {
 		senha : senha
 	}
 
-	var div = document.body;
+	var divisaoUsuarioFilho = document.createElement("div");
 
 	var paragrafoNome = document.createElement("p");
 	var nome = document.createTextNode("Nome: " + usuario.nome);
@@ -54,11 +55,13 @@ function cadastrarUsuario() {
 	paragrafoGenero.appendChild(genero);
 	paragrafoSenha.appendChild(senha);
 
-	div.appendChild(paragrafoNome);
-	div.appendChild(paragrafoSobrenome);
-	div.appendChild(paragrafoData);
-	div.appendChild(paragrafoGenero);
-	div.appendChild(paragrafoSenha);
+	divisaoUsuarioFilho.appendChild(paragrafoNome);
+	divisaoUsuarioFilho.appendChild(paragrafoSobrenome);
+	divisaoUsuarioFilho.appendChild(paragrafoData);
+	divisaoUsuarioFilho.appendChild(paragrafoGenero);
+	divisaoUsuarioFilho.appendChild(paragrafoSenha);
+
+	divisaoUsuario.appendChild(divisaoUsuarioFilho);
 
 	console.log(usuario);
 }
