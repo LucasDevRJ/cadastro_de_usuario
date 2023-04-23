@@ -68,6 +68,14 @@ function cadastrarUsuario() {
 	divisaoUsuario.appendChild(divisaoUsuarioFilho);
 
 	console.log(usuario);
+
+	divisaoUsuarioFilho.onmouseover = function teste() {
+		divisaoUsuarioFilho.style.transform = "scale(1.2)";
+	}
+
+	divisaoUsuarioFilho.onmouseout = function teste() {
+		divisaoUsuarioFilho.style.transform = "scale(1.0)";
+	}
 }
 
 var botao = document.querySelector("button");
